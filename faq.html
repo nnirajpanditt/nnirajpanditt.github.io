@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - LifeRemind</title>
+  <meta name="description" content="Private daily routine planner, habit tracker & offline mood journal. Keep data secure with AES local encryption. No signups, no cloud storage.">
+  <meta name="keywords" content="habit tracker, routine planner, mood journal, private checklist, offline tracker, anxiety relief app">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ - LifeRemind">
+  <meta property="og:description" content="Private daily routine planner, habit tracker & offline mood journal. Keep data secure with AES local encryption. No signups, no cloud storage.">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="FAQ - LifeRemind">
+  <meta property="twitter:description" content="Private daily routine planner, habit tracker & offline mood journal. Keep data secure with AES local encryption. No signups, no cloud storage.">
+  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LifeRemind: Habit Tracker",
+    "operatingSystem": "Android",
+    "applicationCategory": "LifestyleApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "A 100% private, offline-first habit tracker, routine planner, and mood journal with local AES database encryption."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1>LifeRemind</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="container">
+    
+      <section class="content">
+        <h2>Frequently Asked Questions</h2>
+        
+        <h3>1. Is my data backed up, and can I transfer it?</h3>
+        <p>Because LifeRemind is 100% offline, your data resides strictly on your physical device. We do not maintain any cloud backups. However, you can manually back up or transfer your data by going to <strong>Settings ➔ Export Backup</strong>. This generates an encrypted JSON file that you can transfer to a new device and import via <strong>Settings ➔ Import Backup</strong>.</p>
+        
+        <h3>2. Does the app require an internet connection?</h3>
+        <p>No. All core features (Habits, Workout, Sleep, Mood Journal, Pomodoro, Ledgers) run entirely offline. The internet is only used by the Google AdMob plugin to request advertisements and by Firebase to upload anonymous crash reports.</p>
+        
+        <h3>3. What security is used to protect my database?</h3>
+        <p>LifeRemind uses a local, high-performance database (Hive CE) encrypted with a 256-bit AES key. This key is generated uniquely for your installation and stored securely in Android's hardware-backed Keystore system, meaning other apps or unauthorized users cannot read your databases.</p>
+
+        <h3>4. Why is my App Icon Name truncated on my launcher?</h3>
+        <p>Some custom Android interfaces (like MIUI or ColorOS) truncate hardcoded app names. In our latest version (1.0.3+), we migrated the launcher label to a localizable resource string (@string/app_name) which conforms to standard Android guidelines, fixing launcher name truncation issues.</p>
+      </section>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 LifeRemind. All rights reserved.</p>
+      <div style="margin-top: 1rem;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="delete-data.html">Delete Data</a>
+        <a href="licenses.html">Licenses</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

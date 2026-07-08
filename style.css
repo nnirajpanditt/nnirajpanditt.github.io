@@ -1,0 +1,244 @@
+
+:root {
+  --primary-color: #7c4dff;
+  --secondary-color: #00b0ff;
+  --accent-color: #ff8906;
+  --bg-color: #0f0e17;
+  --card-bg: #1f2029;
+  --text-color: #fffffe;
+  --text-secondary: #a7a9be;
+  --border-color: #2e2f3e;
+  --gradient: linear-gradient(135deg, #7c4dff 0%, #00b0ff 100%);
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: rgba(31, 32, 41, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1.25rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--secondary-color);
+}
+
+.hero {
+  text-align: center;
+  padding: 7rem 1rem;
+  background: radial-gradient(circle at top, rgba(124, 77, 255, 0.15) 0%, transparent 65%);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3.5rem;
+}
+
+.hero h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.hero h2 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--gradient);
+  color: #fff;
+  padding: 0.9rem 2.25rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 20px rgba(124, 77, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(124, 77, 255, 0.6);
+}
+
+.content {
+  margin-bottom: 4.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+}
+
+.section-title span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.opportunity-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(124, 77, 255, 0.1);
+}
+
+.opportunity-card .icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(124, 77, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.opportunity-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--text-color);
+}
+
+.opportunity-card p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+  background: rgba(31, 32, 41, 0.5);
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+  .nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .hero {
+    padding: 4.5rem 1rem;
+  }
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+  .opportunity-card {
+    padding: 2rem 1.5rem;
+  }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  footer a {
+    margin: 0.25rem 0;
+  }
+}
