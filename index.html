@@ -3,159 +3,642 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LifeRemind: Habit Tracker - LifeRemind</title>
-  <meta name="description" content="Private daily routine planner, habit tracker & offline mood journal. Keep data secure with AES local encryption. No signups, no cloud storage.">
-  <meta name="keywords" content="habit tracker, routine planner, mood journal, private checklist, offline tracker, anxiety relief app">
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="LifeRemind: Habit Tracker - LifeRemind">
-  <meta property="og:description" content="Private daily routine planner, habit tracker & offline mood journal. Keep data secure with AES local encryption. No signups, no cloud storage.">
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="LifeRemind: Habit Tracker - LifeRemind">
-  <meta property="twitter:description" content="Private daily routine planner, habit tracker & offline mood journal. Keep data secure with AES local encryption. No signups, no cloud storage.">
+  <title>Niraj Panditt - App Portfolio</title>
+  <meta name="description" content="Explore privacy-first, offline-first mobile and web applications designed and developed by Niraj Panditt.">
+  <meta name="keywords" content="Niraj Panditt, App Portfolio, LifeRemind, Numerology 360, offline habit tracker, privacy apps">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "LifeRemind: Habit Tracker",
-    "operatingSystem": "Android",
-    "applicationCategory": "LifestyleApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "A 100% private, offline-first habit tracker, routine planner, and mood journal with local AES database encryption."
-  }
-  </script>
+  <style>
+    :root {
+      --bg-dark: #080710;
+      --bg-card: #12111f;
+      --bg-card-hover: #1a182e;
+      --primary: #7c4dff;
+      --primary-glow: rgba(124, 77, 255, 0.4);
+      --secondary: #00b0ff;
+      --secondary-glow: rgba(0, 176, 255, 0.3);
+      --accent: #ff8906;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ambient background lights */
+    .ambient-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+      top: -200px;
+      left: -200px;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(80px);
+      opacity: 0.6;
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--secondary-glow) 0%, transparent 70%);
+      bottom: -100px;
+      right: -100px;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(80px);
+      opacity: 0.5;
+    }
+
+    header {
+      position: relative;
+      z-index: 10;
+      padding: 2.5rem 2rem;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(8, 7, 16, 0.7);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .portfolio-badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--secondary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      z-index: 5;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .hero-section {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .hero-section h1 {
+      font-family: var(--font-title);
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    .hero-section h1 span {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .app-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-glow) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .app-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(124, 77, 255, 0.4);
+      background-color: var(--bg-card-hover);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(124, 77, 255, 0.1);
+    }
+
+    .app-card:hover::before {
+      opacity: 0.3;
+    }
+
+    .app-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .app-card:hover .app-icon {
+      background: rgba(124, 77, 255, 0.1);
+      border-color: var(--primary);
+    }
+
+    .app-details {
+      position: relative;
+      z-index: 2;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .app-title {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+
+    .app-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .app-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #fff;
+    }
+
+    .tag-highlight {
+      background: rgba(0, 176, 255, 0.1);
+      border-color: var(--secondary);
+      color: var(--secondary);
+    }
+
+    .tag-accent {
+      background: rgba(255, 137, 6, 0.1);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn {
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(124, 77, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 20px rgba(124, 77, 255, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #fff;
+    }
+
+    .coming-soon {
+      opacity: 0.7;
+    }
+
+    .coming-soon .app-title::after {
+      content: 'Coming Soon';
+      font-size: 0.7rem;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      background: rgba(255, 137, 6, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2.5rem 2rem;
+      background: rgba(8, 7, 16, 0.9);
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Fullscreen Showcase Portal Overlay */
+    .showcase-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--bg-dark);
+      z-index: 10000;
+      display: none; /* Controlled by JS */
+      flex-direction: column;
+    }
+
+    .showcase-header {
+      background: rgba(18, 17, 31, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .showcase-title-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .showcase-back-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 0.4rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .showcase-back-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .showcase-app-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .showcase-app-name {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .showcase-app-status {
+      font-size: 0.75rem;
+      color: var(--secondary);
+    }
+
+    .showcase-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Device frame simulation toggles */
+    .view-toggles {
+      display: flex;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .view-toggle {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.3rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .view-toggle.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .external-link-btn {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .external-link-btn:hover {
+      color: #fff;
+    }
+
+    .showcase-content-area {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Simulated Device Containers */
+    .device-container {
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .device-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fff;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Tablet mockup size */
+    .device-container.tablet .device-iframe {
+      width: 768px;
+      height: 90%;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      border: 10px solid #1f2029;
+    }
+
+    /* Mobile mockup size */
+    .device-container.mobile .device-iframe {
+      width: 375px;
+      height: 85%;
+      border-radius: 32px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      border: 12px solid #1f2029;
+    }
+  </style>
 </head>
 <body>
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-2"></div>
+
   <header>
-    <div class="container nav">
-      <h1>LifeRemind</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="support.html">Support</a></li>
-        </ul>
-      </nav>
+    <div class="header-container">
+      <div class="logo">Niraj Panditt</div>
+      <div class="portfolio-badge">App Ecosystem</div>
     </div>
   </header>
-  
-  <main class="container">
-    
-      <section class="hero">
-        <h2>Master Your Daily Routine <br><span>With Total Privacy</span></h2>
-        <p>LifeRemind is your secure, offline companion for a disciplined, balanced, and mindful life. Track habits, workouts, sleep, and moods with military-grade local encryption.</p>
-        <a href="#" class="btn">Download on Google Play</a>
-      </section>
-      
-      <section class="content">
-        <h2 class="section-title">Why Choose <span>LifeRemind</span>?</h2>
-        <div class="opportunities-grid">
-          
-          <div class="opportunity-card">
-            <div class="icon-wrap">🔒</div>
-            <h3>100% Encrypted & Offline</h3>
-            <p>Your habits, moods, and private logs are secured on-device using local AES keys. No account creation, no cloud synchronization, and absolutely no data tracking.</p>
+
+  <main>
+    <section class="hero-section">
+      <h1>Explore Our <span>Product Suite</span></h1>
+      <p>A collection of clean, functional, and privacy-first software solutions crafted for everyday productivity and personal development.</p>
+    </section>
+
+    <div class="apps-grid">
+      <!-- LifeRemind App -->
+      <div class="app-card" id="card-liferemind">
+        <div class="app-icon">🔒</div>
+        <div class="app-details">
+          <h3 class="app-title">LifeRemind</h3>
+          <p class="app-desc">A 100% private, offline-first habit tracker, daily routine planner, and mood journal with local AES-256 database encryption. Keep your records securely in your own pocket.</p>
+          <div class="app-tags">
+            <span class="tag tag-highlight">Privacy-First</span>
+            <span class="tag">Habit Tracker</span>
+            <span class="tag">Offline Ledger</span>
           </div>
-          
-          <div class="opportunity-card">
-            <div class="icon-wrap">🛡️</div>
-            <h3>Peace of Mind Checklist</h3>
-            <p>Soothe obsessive worries and leaving-home anxiety. Keep active checks on your front door, stove status, iron plug, and garage doors before heading out.</p>
+          <div class="btn-group">
+            <button class="btn btn-primary" onclick="launchShowcase('LifeRemind', 'LifeRemind/index.html')">Show website</button>
+            <a href="LifeRemind/index.html" class="btn btn-secondary">Direct Link</a>
           </div>
-          
-          <div class="opportunity-card">
-            <div class="icon-wrap">🚫</div>
-            <h3>No Complaining Challenge</h3>
-            <p>Build emotional resilience. Track daily complaint logs to notice and control negative habits, developing a stronger and more optimistic mindset.</p>
-          </div>
-          
-          <div class="opportunity-card">
-            <div class="icon-wrap">⚡</div>
-            <h3>Lite, Compact & Fast</h3>
-            <p>Get a complete hydration logger, sleep scheduler, workout assistant, and plant waterer in a highly optimized package under 30MB. No battery drain, no bloat.</p>
-          </div>
-          
         </div>
-      </section>
+      </div>
 
-      <section class="content">
-        <h2 class="section-title">Explore All <span>App Features</span></h2>
-        <div class="opportunities-grid">
-          
-          <div class="opportunity-card">
-            <div class="icon-wrap">📅</div>
-            <h3>Habits & Daily Planner</h3>
-            <p>Establish healthy habits and organize your daily schedule. View your weekly progress on a consistency grid and track current streaks to stay motivated.</p>
+      <!-- Numerology 360 App -->
+      <div class="app-card" id="card-numerology360">
+        <div class="app-icon">🔮</div>
+        <div class="app-details">
+          <h3 class="app-title">Numerology 360</h3>
+          <p class="app-desc">Decode Pythagorean & Chaldean numbers, generate Lo Shu Grids, explore Destiny Matrices, check cosmic compatibility, and align with daily readings. Completely offline and private.</p>
+          <div class="app-tags">
+            <span class="tag tag-accent">Cosmic Blueprint</span>
+            <span class="tag">Pythagorean Grid</span>
+            <span class="tag">Destiny Matrix</span>
           </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">📝</div>
-            <h3>Offline Mood Journal</h3>
-            <p>A completely private space to log your emotions and daily entries. Safe from cloud spying, your thoughts are encrypted locally on your device.</p>
+          <div class="btn-group">
+            <button class="btn btn-primary" onclick="launchShowcase('Numerology 360', 'Numerology360/index.html')">Show website</button>
+            <a href="Numerology360/index.html" class="btn btn-secondary">Direct Link</a>
           </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">💧</div>
-            <h3>Water Tracker</h3>
-            <p>Set daily hydration targets and log water intake with a beautifully animated dynamic fluid container UI. Set custom interval notifications to remind you to drink.</p>
-          </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">🧘</div>
-            <h3>Anxiety Grounding Suite</h3>
-            <p>Use our interactive breathing guide to calm down during stressful moments, log triggers, and utilize our peace-of-mind checklists before leaving home.</p>
-          </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">🌱</div>
-            <h3>Gamified Plant Growth</h3>
-            <p>Watch a digital plant grow and bloom as you complete your habits and daily routines. Visual motivation that brings your progress to life.</p>
-          </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">⏱️</div>
-            <h3>Focus (Pomodoro) & Tasks</h3>
-            <p>Run Pomodoro focus sessions to execute deep work without distractions. Use essential checklists to organize notes, shopping lists, and quick-note cards.</p>
-          </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">💰</div>
-            <h3>Ledgers & Ethics logs</h3>
-            <p>Manage your finances offline using our spend ledger, and record personal development achievements and moral milestones with our ethics journal.</p>
-          </div>
-
-          <div class="opportunity-card">
-            <div class="icon-wrap">📈</div>
-            <h3>Visual Analytics</h3>
-            <p>Access high-definition graphical charts showing habit success rates, sleep consistency, water intake statistics, and mood fluctuation history.</p>
-          </div>
-
         </div>
-      </section>
-    
+      </div>
+
+      <!-- NoteFlow Coming Soon App -->
+      <div class="app-card coming-soon">
+        <div class="app-icon">📝</div>
+        <div class="app-details">
+          <h3 class="app-title">NoteFlow</h3>
+          <p class="app-desc">A minimalist offline markdown editor and note-taking space. Organizes your thoughts in dynamic cards, with support for bidirectional linking and local storage.</p>
+          <div class="app-tags">
+            <span class="tag">Markdown</span>
+            <span class="tag">Note-taking</span>
+            <span class="tag">Offline</span>
+          </div>
+          <div class="btn-group" style="opacity: 0.5; pointer-events: none;">
+            <button class="btn btn-primary">Preview</button>
+            <button class="btn btn-secondary">Website</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2026 LifeRemind. All rights reserved.</p>
-      <div style="margin-top: 1rem;">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="delete-data.html">Delete Data</a>
-        <a href="licenses.html">Licenses</a>
-        <a href="contact.html">Contact Us</a>
+    <p>&copy; 2026 Niraj Panditt. Built with privacy and elegance in mind.</p>
+  </footer>
+
+  <!-- Showcase Iframe overlay viewer -->
+  <div class="showcase-overlay" id="showcaseOverlay">
+    <div class="showcase-header">
+      <div class="showcase-title-area">
+        <button class="showcase-back-btn" onclick="closeShowcase()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Portfolio
+        </button>
+        <div class="showcase-app-info">
+          <span class="showcase-app-name" id="showcaseAppName">App Name</span>
+          <span class="showcase-app-status">Live Preview Portal</span>
+        </div>
+      </div>
+
+      <div class="showcase-controls">
+        <div class="view-toggles">
+          <button class="view-toggle active" id="btn-desktop" onclick="setViewport('desktop')">Desktop</button>
+          <button class="view-toggle" id="btn-tablet" onclick="setViewport('tablet')">Tablet</button>
+          <button class="view-toggle" id="btn-mobile" onclick="setViewport('mobile')">Mobile</button>
+        </div>
+        <a href="#" class="external-link-btn" id="showcaseExternalLink" target="_blank">
+          Open Direct
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
       </div>
     </div>
-  </footer>
+    <div class="showcase-content-area">
+      <div class="device-container" id="deviceContainer">
+        <iframe class="device-iframe" id="showcaseIframe" src="about:blank"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('showcaseOverlay');
+    const iframe = document.getElementById('showcaseIframe');
+    const appNameEl = document.getElementById('showcaseAppName');
+    const externalLink = document.getElementById('showcaseExternalLink');
+    const deviceContainer = document.getElementById('deviceContainer');
+
+    function launchShowcase(name, url) {
+      appNameEl.textContent = name;
+      externalLink.href = url;
+      iframe.src = url;
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Disable background scrolling
+      setViewport('desktop'); // Default view
+    }
+
+    function closeShowcase() {
+      overlay.style.display = 'none';
+      iframe.src = 'about:blank';
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+
+    function setViewport(device) {
+      // Remove active classes
+      document.getElementById('btn-desktop').classList.remove('active');
+      document.getElementById('btn-tablet').classList.remove('active');
+      document.getElementById('btn-mobile').classList.remove('active');
+
+      // Set container class
+      deviceContainer.className = 'device-container ' + device;
+
+      // Set active button
+      document.getElementById('btn-' + device).classList.add('active');
+    }
+  </script>
 </body>
 </html>
