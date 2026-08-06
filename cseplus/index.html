@@ -4,148 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE Plus - Learn Programming</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #f8fafc;
-            --text-main: #1e293b;
-            --text-light: #64748b;
-        }
-        body { 
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            margin: 0; 
-            padding: 0; 
-            background-color: var(--secondary); 
-            color: var(--text-main); 
-        }
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, var(--primary) 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-        .header p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 20px auto 0;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1000px;
-            margin: -40px auto 40px;
-            padding: 0 20px;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .card p {
-            color: var(--text-light);
-            margin-bottom: 0;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: white;
-            margin-top: 60px;
-            border-top: 1px solid #e2e8f0;
-        }
-        .footer a {
-            color: var(--primary);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 500;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .download-btn {
-            display: inline-block;
-            background-color: white;
-            color: var(--primary);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">CSE Plus</a>
+        <div class="nav-links">
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="help.html">Help Center</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
     <div class="header">
         <h1>CSE Plus</h1>
         <p>Your Ultimate Offline Companion for Computer Science & Engineering. Master Programming, Ace Interviews, and Crack Exams.</p>
-        <a href="#" class="download-btn">Get it on Google Play</a>
     </div>
-
     <div class="container">
         <div class="features">
-            <div class="card">
+            <div class="feature-card">
                 <h3>📖 Comprehensive Notes</h3>
                 <p>Read in-depth chapters and tutorials on various programming languages and computer science concepts.</p>
             </div>
-            <div class="card">
+            <div class="feature-card">
                 <h3>👨‍💻 Code Lab (Programs)</h3>
                 <p>Explore a massive library of important code snippets and algorithms with syntax highlighting and outputs.</p>
             </div>
-            <div class="card">
+            <div class="feature-card">
                 <h3>📝 MCQ & Mock Tests</h3>
                 <p>Test your knowledge with rigorous multiple-choice questions, timed quizzes, and full mock exams.</p>
             </div>
-            <div class="card">
-                <h3>🎤 Interview & Viva</h3>
-                <p>Prepare for placements and lab exams with curated interview questions and viva-voce flashcards.</p>
-            </div>
-            <div class="card">
-                <h3>📊 Gamified Learning</h3>
-                <p>Track your daily streaks, unlock achievements, and visualize your progress on an interactive dashboard.</p>
-            </div>
-            <div class="card">
+            <div class="feature-card">
                 <h3>⚡ Offline First</h3>
                 <p>Download the content once and study anywhere, anytime. No active internet connection required!</p>
             </div>
         </div>
     </div>
-
     <div class="footer">
-        <p><strong>CSE Plus</strong> &copy; 2026 Niraj Pandit. All rights reserved.</p>
-        <div style="margin-top: 15px;">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms of Service</a> | 
-            <a href="delete-data.html">Data Deletion</a>
-        </div>
+    <p><strong>CSE Plus</strong> &copy; 2026 Niraj Pandit. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="delete-data.html">Data Deletion</a>
+        <a href="contact.html">Report a Bug</a>
+        <a href="contact.html">Request Feature</a>
     </div>
-
+</div>
 </body>
 </html>

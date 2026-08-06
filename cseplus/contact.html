@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - CSE Plus</title>
+    <title>Contact Us - CSE Plus</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,14 +20,19 @@
 </nav>
     <div class="container">
         <div class="card">
-            <h1 style="color: var(--primary);">Terms of Service</h1>
-            <p><strong>Effective Date:</strong> August 6, 2026</p>
-            <h2>1. License</h2>
-            <p>You are not allowed to copy, or modify the app, any part of the app, or our trademarks in any way.</p>
-            <h2>2. Use of Service</h2>
-            <p>The CSE Plus app is designed for educational purposes. We strive to ensure the content is accurate and up to date, but we do not guarantee the completeness or absolute accuracy of the study material provided.</p>
-            <h2>3. Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us at <strong>nnirajpanditt@gmail.com</strong>.</p>
+            <h1 style="color: var(--primary);">Contact Us</h1>
+            <p>Use this form to Report a Bug, Request a Feature, or just say hello!</p>
+            <form action="mailto:nnirajpanditt@gmail.com" method="GET" enctype="text/plain">
+                <label>Subject Type:</label>
+                <select name="subject" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid var(--border);">
+                    <option value="Bug Report">🐛 Report a Bug</option>
+                    <option value="Feature Request">✨ Request a Feature</option>
+                    <option value="General Inquiry">💬 General Inquiry</option>
+                </select>
+                <label>Your Message:</label>
+                <textarea name="body" rows="6" placeholder="Describe the issue or feature you'd like to see..."></textarea>
+                <button type="submit">Open Email Client to Send</button>
+            </form>
         </div>
     </div>
     <div class="footer">
