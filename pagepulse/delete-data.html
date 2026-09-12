@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data & Account Deletion - PagePulse</title>
+  <meta name="description" content="Request deletion of your PagePulse account and personal reading data in compliance with Google Play Policy.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo-group">
+        <img src="icon.png" alt="PagePulse Logo">
+        <h1>PagePulse</h1>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="delete-data.html" class="active">Data Deletion</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="content-card">
+      <h2>Account & Data Deletion Request</h2>
+      <span class="last-updated">Google Play Compliance • Updated: September 12, 2026</span>
+
+      <p>In accordance with <strong>Google Play's User Data & Account Deletion Policy</strong>, PagePulse provides users with full autonomy to delete their account, reading logs, and associated information.</p>
+
+      <div class="alert-box">
+        <strong>Overview:</strong> PagePulse is designed with a local-first architecture. Most reading data is stored solely on your personal device. If you enabled optional cloud synchronization, you can request full permanent removal of all cloud records at any time.
+      </div>
+
+      <h3>Method 1: Delete Local Data Directly From Your Device</h3>
+      <p>If you have not used cloud sync, all your data resides strictly within your device's isolated application storage sandbox. You can erase it immediately using either method:</p>
+      
+      <h4>Option A: Within the Android System Settings</h4>
+      <ol>
+        <li>Open your Android phone's <strong>Settings</strong>.</li>
+        <li>Navigate to <strong>Apps</strong> (or <strong>App Management</strong>) &rarr; <strong>PagePulse</strong>.</li>
+        <li>Tap <strong>Storage & Cache</strong>.</li>
+        <li>Tap <strong>Clear Storage</strong> (or <strong>Clear Data</strong>).</li>
+        <li>All books, reading sessions, private notes, and preferences will be permanently erased immediately.</li>
+      </ol>
+
+      <h4>Option B: Uninstalling the App</h4>
+      <p>Uninstalling PagePulse removes the sandboxed SQLite database (<code>pagepulse_local.db</code>) and all cached data from your device permanently.</p>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--card-border);">
+
+      <h3>Method 2: Request Cloud Sync Data & Account Deletion</h3>
+      <p>If you used Supabase cloud synchronization and wish to delete your cloud account, reading sessions, and user records from our backend servers, follow these steps:</p>
+
+      <div class="alert-box warning">
+        <strong>Important:</strong> Deleting cloud data is irreversible. All reading history, streak records, and cloud backup sessions linked to your email/UID will be permanently destroyed.
+      </div>
+
+      <h4>Step-by-Step Deletion Request Process:</h4>
+      <ol>
+        <li>Send an email to our data privacy team at: <a href="mailto:nnirajpanditt@gmail.com?subject=PagePulse%20Data%20Deletion%20Request"><strong>nnirajpanditt@gmail.com</strong></a></li>
+        <li>Use the subject line: <code>PagePulse Account and Data Deletion Request</code></li>
+        <li>In the body of your email, please provide:
+          <ul>
+            <li>The registered email address associated with your PagePulse cloud account (or your Supabase Auth User ID).</li>
+            <li>A brief statement requesting complete deletion of all reading sessions, library metadata, and authentication profiles.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>What Happens Next?</h3>
+      <ul>
+        <li><strong>Verification:</strong> We will verify ownership of the account to prevent unauthorized deletion requests.</li>
+        <li><strong>Permanent Erasure:</strong> Within <strong>30 days</strong> of verification, all cloud database records linked to your user ID will be permanently purged from Supabase servers and all backup snapshots.</li>
+        <li><strong>Confirmation:</strong> You will receive a written confirmation email once the deletion process is complete.</li>
+        <li><strong>No Data Retention:</strong> PagePulse does not retain any user personal data, reading logs, or identifiers following deletion, except where strictly required to comply with statutory legal obligations.</li>
+      </ul>
+
+      <h3>Questions & Privacy Support</h3>
+      <p>If you have any questions regarding how your data is handled or need assistance with deletion, please contact:</p>
+      <p>
+        <strong>Niraj AI Solutions / Niraj Kumar</strong><br>
+        Email: <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a><br>
+        Website: <a href="https://nnirajpanditt.github.io/pagepulse/">https://nnirajpanditt.github.io/pagepulse/</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a> •
+        <a href="privacy.html">Privacy Policy</a> •
+        <a href="terms.html">Terms of Service</a> •
+        <a href="delete-data.html">Data Deletion</a> •
+        <a href="support.html">Support</a>
+      </div>
+      <p>&copy; 2026 PagePulse. Developed by Niraj AI Solutions (Niraj Kumar). All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

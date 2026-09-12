@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - PagePulse: Book & Reading Tracker</title>
+  <meta name="description" content="Privacy Policy for PagePulse: Book & Reading Tracker developed by Niraj AI Solutions (Niraj Kumar). Local-first, private reading journey.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo-group">
+        <img src="icon.png" alt="PagePulse Logo">
+        <h1>PagePulse</h1>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="delete-data.html">Data Deletion</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="content-card">
+      <h2>Privacy Policy</h2>
+      <span class="last-updated">Effective Date: September 12, 2026</span>
+
+      <p>This Privacy Policy explains how <strong>PagePulse: Book & Reading Tracker</strong> ("PagePulse", "we", "our", or "us"), developed by <strong>Niraj AI Solutions</strong> (Legal Entity: <strong>Niraj Kumar</strong>), handles, stores, and protects user information when you use our mobile application (Application ID / Package Name: <code>com.pagepulse.pagepulse</code>).</p>
+
+      <div class="alert-box">
+        <strong>Privacy-First Commitment:</strong> PagePulse is built with a local-first, privacy-by-design architecture. Your personal reading logs, journal notes, goals, and book collections are stored locally on your device in a secure SQLite sandbox. We do not sell, rent, or monetize your personal data.
+      </div>
+
+      <h3>1. Developer & Data Controller Identity</h3>
+      <ul>
+        <li><strong>Application:</strong> PagePulse: Book & Reading Tracker</li>
+        <li><strong>Package Name:</strong> <code>com.pagepulse.pagepulse</code></li>
+        <li><strong>Developer / Entity:</strong> Niraj AI Solutions (Niraj Kumar)</li>
+        <li><strong>Contact Email:</strong> <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a></li>
+        <li><strong>Official Website:</strong> <a href="https://nnirajpanditt.github.io/pagepulse/">https://nnirajpanditt.github.io/pagepulse/</a></li>
+      </ul>
+
+      <h3>2. Information We Collect and Process</h3>
+
+      <h4>A. Locally Stored Data (On Your Device)</h4>
+      <p>The core functionality of PagePulse operates entirely on your physical device. This includes:</p>
+      <ul>
+        <li><strong>Library Catalog:</strong> Book titles, authors, ISBNs, page counts, covers, format preferences, and reading status (Currently Reading, Want to Read, Completed, Did Not Finish).</li>
+        <li><strong>Reading Activity:</strong> Timestamps, session durations, start/end pages, reading speed, and daily streak counts.</li>
+        <li><strong>Personal Notes & Journal:</strong> Reflections, quotes, and thoughts you log while reading. Notes marked as private remain strictly confined to your device database.</li>
+        <li><strong>Reading Goals:</strong> Daily minutes, daily page targets, and annual book challenges.</li>
+      </ul>
+
+      <h4>B. Third-Party Book Catalog Search Queries</h4>
+      <p>When you discover and add new books through the app's online search feature, PagePulse sends the search terms (such as book title or ISBN) to:</p>
+      <ul>
+        <li><strong>Open Library (Internet Archive):</strong> Public catalog API used to fetch book metadata and cover art.</li>
+        <li><strong>Google Books API (Google LLC):</strong> Secondary public catalog API for book metadata retrieval.</li>
+      </ul>
+      <p>These requests contain only the search query string and standard network headers. <strong>No personal user identity, device ID, or user account information is transmitted</strong> to OpenLibrary or Google Books.</p>
+
+      <h4>C. Optional Cloud Synchronization (Supabase)</h4>
+      <p>If you choose to use cloud synchronization features, reading sessions may be securely synchronized using <strong>Supabase</strong> infrastructure. All data in transit is protected via modern TLS/HTTPS encryption, and database access is guarded by strict <strong>Row Level Security (RLS)</strong> policies ensuring that authenticated users can only access their own records.</p>
+
+      <h3>3. Advertisements & Monetization</h3>
+      <ul>
+        <li><strong>No Advertisements:</strong> PagePulse does <strong>NOT</strong> display third-party advertisements. We do not integrate ad networks (such as Google AdMob, Unity, or AppLovin) and do not collect Android Advertising IDs (AAID).</li>
+        <li><strong>No Paid Subscriptions:</strong> All core features, including reading statistics, pace analytics, genre breakdowns, and streak trackers, are 100% free and accessible.</li>
+      </ul>
+
+      <h3>4. Permissions Used by the App</h3>
+      <p>PagePulse requests minimal permissions strictly necessary for its features:</p>
+      <ul>
+        <li><code>android.permission.INTERNET</code>: Required to search for book metadata on OpenLibrary / Google Books and download public book cover art.</li>
+        <li><code>android.permission.ACCESS_NETWORK_STATE</code>: Used to check whether the device has an active internet connection to prevent unnecessary network requests.</li>
+      </ul>
+      <p>PagePulse does <strong>NOT</strong> request access to sensitive permissions such as Camera, Microphone, Precise Location, Contacts, or SMS.</p>
+
+      <h3>5. Data Retention & Deletion</h3>
+      <p>Because PagePulse is local-first, you maintain total control over your data:</p>
+      <ul>
+        <li><strong>Local Deletion:</strong> You can delete any book, note, or reading session directly in the app at any time. Clearing the app's storage in Android Settings or uninstalling the app permanently erases all local SQLite database records.</li>
+        <li><strong>Cloud Account & Data Deletion:</strong> To request deletion of any cloud-synced account data, please visit our dedicated <a href="delete-data.html">Data Deletion Request Page</a> or email <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a>. Requests are fulfilled within 30 days.</li>
+      </ul>
+
+      <h3>6. Children’s Privacy (COPPA & Google Play Families Policy)</h3>
+      <p>PagePulse is designed for general audiences (ages 13 and older). We do not knowingly collect or solicit personal information from children under the age of 13. If you believe that a child has provided us with personal information, please contact us immediately, and we will promptly remove it.</p>
+
+      <h3>7. Your Legal Rights (GDPR & CCPA)</h3>
+      <p>Depending on your region, you have rights regarding your personal data:</p>
+      <ul>
+        <li>The right to access and receive an export of your data.</li>
+        <li>The right to rectify inaccurate records.</li>
+        <li>The right to request immediate erasure of your data.</li>
+        <li>The right to withdraw consent at any time.</li>
+      </ul>
+
+      <h3>8. Changes to This Privacy Policy</h3>
+      <p>We may update our Privacy Policy periodically. Any changes will be posted on this page with an updated "Effective Date". We encourage you to review this page periodically.</p>
+
+      <h3>9. Contact Us</h3>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact:</p>
+      <p>
+        <strong>Niraj AI Solutions / Niraj Kumar</strong><br>
+        Email: <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a><br>
+        Support: <a href="https://nnirajpanditt.github.io/pagepulse/support.html">PagePulse Support Page</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a> •
+        <a href="privacy.html">Privacy Policy</a> •
+        <a href="terms.html">Terms of Service</a> •
+        <a href="delete-data.html">Data Deletion</a> •
+        <a href="support.html">Support</a>
+      </div>
+      <p>&copy; 2026 PagePulse. Developed by Niraj AI Solutions (Niraj Kumar). All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PagePulse: Book & Reading Tracker</title>
+  <meta name="description" content="Read with purpose. Track every page, build a daily reading habit, log notes, and understand your reading rhythm with PagePulse. 100% private.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 3rem 1rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background: rgba(255, 107, 107, 0.15);
+      border: 1px solid rgba(255, 107, 107, 0.3);
+      border-radius: 20px;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, #FFFFFF 30%, #F4A261 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 0 auto 2rem auto;
+      color: var(--text-secondary);
+    }
+    .grid-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-color);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .feature-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+      font-size: 1.15rem;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo-group">
+        <img src="icon.png" alt="PagePulse Logo">
+        <h1>PagePulse</h1>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="delete-data.html">Data Deletion</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <span class="hero-badge">Local-First • Privacy-by-Design</span>
+      <h1>Read with purpose.<br>Track every page.</h1>
+      <p>PagePulse is your personal, offline-first reading companion. Track your daily pages, build unbroken reading streaks, save private book reflections, and understand your reading rhythm.</p>
+      <div>
+        <a href="https://play.google.com/store/apps/details?id=com.pagepulse.pagepulse" class="btn" target="_blank" rel="noopener">
+          Get it on Google Play
+        </a>
+      </div>
+    </div>
+
+    <div class="grid-features">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Your Complete Library</h3>
+        <p>Organize books across Currently Reading, Want to Read, Completed, and Did Not Finish shelves with instant pagination and search.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <h3>Live Reading Timer</h3>
+        <p>Focus with distraction-free reading sit-downs. Automatically log start/end pages, reading speed, and duration.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <h3>Daily Streaks & Rhythm</h3>
+        <p>Build lifelong reading habits with daily goal tracking and Vacation Mode to freeze streaks when you need a mindful break.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Deep Reading Insights</h3>
+        <p>Pace analytics, pages-per-day rhythm, monthly volume charts, and genre breakdowns to understand how you read.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✍️</div>
+        <h3>Private Reading Journal</h3>
+        <p>Capture thoughts, key quotes, chapter notes, and ratings stored safely in your device's isolated database sandbox.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>100% Private & Ad-Free</h3>
+        <p>No intrusive ads, no paywalls, and no third-party tracking. Your reading reflections belong to you alone.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a> •
+        <a href="privacy.html">Privacy Policy</a> •
+        <a href="terms.html">Terms of Service</a> •
+        <a href="delete-data.html">Data Deletion</a> •
+        <a href="support.html">Support</a>
+      </div>
+      <p>&copy; 2026 PagePulse. Developed by Niraj AI Solutions (Niraj Kumar). All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
