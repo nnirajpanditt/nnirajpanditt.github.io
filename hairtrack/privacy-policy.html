@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - HairTrack: Hair Growth & Hair Journal</title>
+<style>
+  :root {
+    --primary: #1B3B2B;
+    --primary-light: #2A5740;
+    --sage: #7C9A86;
+    --sage-light: #E2ECE5;
+    --sage-muted: #A5B8AC;
+    --bg: #FBFBF9;
+    --surface: #FFFFFF;
+    --text-primary: #17211B;
+    --text-secondary: #536257;
+    --border: #E8E7E0;
+    --error: #C25946;
+  }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.65; 
+    color: var(--text-primary); 
+    max-width: 860px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    background-color: var(--bg);
+  }
+  h1, h2, h3 { color: var(--primary); }
+  h1 { border-bottom: 2px solid var(--sage-muted); padding-bottom: 12px; font-size: 2.1rem; }
+  h2 { margin-top: 32px; font-size: 1.35rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+  h3 { font-size: 1.1rem; margin-top: 20px; color: var(--primary-light); }
+  p { margin-bottom: 16px; color: var(--text-secondary); }
+  ul, ol { margin-bottom: 16px; padding-left: 24px; color: var(--text-secondary); }
+  li { margin-bottom: 8px; }
+  a { color: var(--primary); text-decoration: underline; font-weight: 500; }
+  a:hover { color: var(--sage); }
+  .container { 
+    background: var(--surface); 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 16px rgba(27, 59, 43, 0.05); 
+    border: 1px solid var(--border);
+  }
+  .highlight-box {
+    background-color: var(--sage-light);
+    border: 1px solid var(--sage-muted);
+    border-radius: 8px;
+    padding: 18px;
+    margin: 22px 0;
+  }
+  .highlight-box p { color: var(--primary); margin: 0; font-weight: 500; }
+  .disclaimer-box {
+    background-color: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 22px 0;
+    color: #92400E;
+  }
+  .disclaimer-box p { color: #92400E; margin: 0; font-size: 0.95rem; }
+  .nav-links {
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+  .nav-links a { margin-right: 18px; }
+  .footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html">← Overview</a>
+    <a href="privacy-policy.html"><strong>Privacy Policy</strong></a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="data-deletion.html">Data Deletion</a>
+    <a href="support.html">Support</a>
+  </div>
+
+  <h1>Privacy Policy — HairTrack</h1>
+  <p><strong>Effective Date:</strong> September 21, 2026<br>
+  <strong>Application:</strong> HairTrack — Hair Growth & Hair Journal (Android)</p>
+
+  <div class="disclaimer-box">
+    <p><strong>IMPORTANT MEDICAL & REGULATORY NOTICE:</strong> HairTrack is strictly a personal self-care and observation tracking application. HairTrack does NOT provide medical diagnoses, clinical treatment plans, prescriptions, or claims of guaranteed hair regrowth. This app is not a medical device. Always seek the advice of a board-certified dermatologist, trichologist, or licensed physician regarding any medical condition or hair/scalp disorder.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>🔒 <strong>Zero-Cloud, 100% On-Device Privacy Guarantee:</strong> HairTrack does not upload your photographs, personal notes, shedding records, or routine check-offs to any external server or cloud service. All application data is stored exclusively in your device’s local private sandbox.</p>
+  </div>
+
+  <h2>1. Information We Do NOT Collect</h2>
+  <p>To ensure absolute privacy and compliance with Google Play User Data policies:</p>
+  <ul>
+    <li><strong>No Cloud Account Required:</strong> You do not need to register an account, sign in, or provide your email address, legal name, or phone number to use HairTrack.</li>
+    <li><strong>No Health Data Uploads:</strong> Your journal ratings (shedding level, scalp comfort, stress, sleep), photos, and routine logs are never transmitted to our servers or third parties.</li>
+    <li><strong>No Third-Party Analytics Trackers:</strong> HairTrack contains zero third-party advertising SDKs (e.g., Google AdMob, Unity Ads) and zero marketing/behavioral analytics SDKs (e.g., Firebase Analytics, AppsFlyer, Facebook SDK).</li>
+    <li><strong>No Precise Geolocation:</strong> We do not track, collect, or store your GPS or network location.</li>
+  </ul>
+
+  <h2>2. Information Stored Locally on Your Device</h2>
+  <p>HairTrack stores the following operational records exclusively within your device’s sandboxed SQLite database and local preferences:</p>
+  <ul>
+    <li><strong>Daily Journal Observations:</strong> Date, subjective shedding level (Low / Moderate / High), scalp sensation tags (e.g., Calm, Sensitive, Dry, Oily), hair texture notes, lifestyle sliders (perceived stress, sleep quality, water intake), and optional user notes.</li>
+    <li><strong>Progress Photographs:</strong> Captured camera and gallery images corresponding to standardized tracking angles (Front, Top, Left, Right). Photos are stored in a private directory guarded by a <code>.nomedia</code> file to prevent automatic indexing by public gallery applications.</li>
+    <li><strong>Hair-Care Routines:</strong> Custom self-care habits (e.g., gentle brushing, scalp massage, hydration) and completion check-off history.</li>
+    <li><strong>Reminder Configuration:</strong> Scheduled notification times for daily journal check-ins, monthly photo reminders, and weekly reflections.</li>
+    <li><strong>Onboarding Profile:</strong> Target tracking goals (e.g., consistency, shedding observation), check-in frequency preference, and acceptance timestamp of the regulatory health disclaimer.</li>
+  </ul>
+
+  <h2>3. Android Device Permissions Requested</h2>
+  <p>HairTrack requests only the minimum permissions essential for on-device functionality:</p>
+  <ul>
+    <li><strong>Camera (<code>android.permission.CAMERA</code>):</strong> Used solely when you choose to take a standardized scalp progress photo inside the app. Photos remain on-device only. This feature is optional; you may decline camera access and select images from your local gallery instead.</li>
+    <li><strong>Notifications (<code>android.permission.POST_NOTIFICATIONS</code>):</strong> Used on Android 13+ solely to deliver scheduled habit and journal reminders configured by you. Reminders use discreet phrasing and never display sensitive medical terms on your lock screen.</li>
+    <li><strong>Vibrate (<code>android.permission.VIBRATE</code>):</strong> Allows subtle haptic feedback for notifications.</li>
+    <li><strong>Boot Completed (<code>android.permission.RECEIVE_BOOT_COMPLETED</code>):</strong> Used exclusively to restore your user-scheduled reminders if your device restarts.</li>
+  </ul>
+
+  <h2>4. Screen & Multitasking Privacy (FLAG_SECURE)</h2>
+  <p>To protect sensitive scalp photographs and health observations from unauthorized shoulder-surfing, malware screen scrapers, or exposure in the Android Recent Apps task switcher, HairTrack enforces <code>FLAG_SECURE</code>. This prevents the operating system from caching visual snapshots of the app window when switching tasks.</p>
+
+  <h2>5. Data Retention & Deletion Rights</h2>
+  <p>Because HairTrack operates 100% offline without remote servers, you retain complete sovereignty over your data:</p>
+  <ul>
+    <li><strong>Instant Deletion:</strong> You can delete any individual journal entry, routine item, or progress photo at any time directly in the app interface. Deleted files and records are immediately expunged from SQLite and disk.</li>
+    <li><strong>Complete Data Wipe:</strong> You can clear all data by clearing HairTrack's storage in Android Settings (Settings → Apps → HairTrack → Storage → Clear Storage) or by uninstalling the application. This permanently obliterates all stored photos, database records, and preferences.</li>
+    <li>For step-by-step instructions, please review our <a href="data-deletion.html">Data Deletion Policy</a>.</li>
+  </ul>
+
+  <h2>6. Children’s Privacy (COPPA & GDPR-K)</h2>
+  <p>HairTrack is intended exclusively for adults aged 18 and older. We do not knowingly collect, request, or maintain data from children under the age of 13 (or under 16 in certain jurisdictions).</p>
+
+  <h2>7. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect regulatory updates or application improvements. Any revisions will be published at this URL with an updated effective date.</p>
+
+  <h2>8. Contact & Developer Support</h2>
+  <p>If you have any questions, concerns, or inquiries regarding this Privacy Policy or HairTrack’s security practices, please contact the developer:</p>
+  <ul>
+    <li><strong>Developer:</strong> Niraj Pandit</li>
+    <li><strong>Website:</strong> <a href="https://nnirajpanditt.github.io">https://nnirajpanditt.github.io</a></li>
+    <li><strong>Support Page:</strong> <a href="support.html">HairTrack Support</a></li>
+    <li><strong>Email:</strong> <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a></li>
+  </ul>
+
+  <div class="footer">
+    &copy; 2026 HairTrack. All rights reserved. Personal Wellness & Habit Tracking. Not intended for medical diagnosis or clinical treatment.
+  </div>
+</div>
+</body>
+</html>
