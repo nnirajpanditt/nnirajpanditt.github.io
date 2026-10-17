@@ -1,0 +1,7 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+h1, h2, h3 { color: #00897B; }
+a { color: #00897B; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 20px; }
+.header { text-align: center; margin-bottom: 30px; }
+.nav { display: flex; gap: 15px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }

@@ -1,42 +1,47 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Deletion Policy</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1, h2 { color: #00897B; }
-        .container { background: #f9f9f9; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .footer { margin-top: 40px; font-size: 0.9em; color: #666; border-top: 1px solid #ddd; padding-top: 20px; }
-    </style>
+    <title>Data Deletion Policy - GlucoTrack</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Data Deletion Policy & Request</h1>
-        <p><strong>Last Updated: August 28, 2026</strong></p>
+        <div class="header">
+            <h1>Data Deletion Policy &amp; Instructions</h1>
+            <p><strong>GlucoTrack: Blood Sugar &amp; Carb Tracker</strong></p>
+            <p>Last updated: October 17, 2026</p>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms &amp; Conditions</a> | 
+            <a href="contact.html">Contact Us</a>
+        </div>
         
-        <h2>How We Handle Your Data</h2>
-        <p>The BMI Calculator app is designed with your privacy in mind. We do not require you to create an account, and we do not store your personal health data on our servers.</p>
-        <p>All data you enter into the app (such as your age, gender, height, weight, and calculated BMI history) is stored <strong>locally on your device</strong> using a secure local database (Hive).</p>
+        <h2>1. Zero Cloud Server Storage</h2>
+        <p>GlucoTrack operates strictly <strong>offline and on-device</strong>. We do not require accounts, logins, email verification, or remote server synchronization. Your blood glucose readings, meal records, and profile details are never transmitted to or stored on cloud servers.</p>
         
-        <h2>How to Delete Your Data</h2>
-        <p>Since we do not collect, transmit, or store your personal data on external servers, there is no remote account to delete. You have full control over your data directly within the app.</p>
-        <p>To completely delete all your data and history:</p>
-        <ol>
-            <li>Open the BMI Calculator app on your device.</li>
-            <li>Tap on the <strong>Settings</strong> icon in the bottom navigation bar.</li>
-            <li>Look for the <strong>Health & Data</strong> section.</li>
-            <li>Tap on <strong>Delete All Local Data</strong> and confirm your choice.</li>
+        <h2>2. Instant On-Device Data Deletion</h2>
+        <p>Because all records reside exclusively on your local smartphone storage, you do not need to wait for a support ticket or manual server purging. You have immediate, one-tap control to erase all records:</p>
+        <ol style="line-height: 1.8;">
+            <li>Open the <strong>GlucoTrack</strong> app on your device.</li>
+            <li>Tap on the <strong>Settings</strong> icon in the bottom navigation menu.</li>
+            <li>Scroll down to the <strong>Privacy &amp; Local Storage</strong> section.</li>
+            <li>Tap <strong>Clear All Health Data</strong> and confirm the prompt.</li>
         </ol>
-        <p>Alternatively, uninstalling the app from your device will also completely erase all stored data.</p>
+        <p>This action executes an immediate database purge across all local Hive NoSQL stores on your device, permanently erasing all readings.</p>
         
-        <h2>Contact Us</h2>
-        <p>If you have any questions or concerns regarding your data or this policy, please contact us at:</p>
+        <h2>3. Full Uninstallation</h2>
+        <p>Alternatively, uninstalling the GlucoTrack app from your Android device immediately and irreversibly deletes the local sandbox storage and all associated databases.</p>
+        
+        <h2>4. Contact Developer</h2>
+        <p>For any inquiries regarding data sovereignty or deletion verification, contact:</p>
         <p>Email: <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a></p>
         
-        <div class="footer">
-            <p>&copy; 2026 Niraj Pandit. All rights reserved.</p>
+        <div style="margin-top: 30px; font-size: 0.85em; color: #888; border-top: 1px solid #eee; padding-top: 15px; text-align: center;">
+            <p>&copy; 2026 Niraj Pandit · GlucoTrack. All rights reserved.</p>
         </div>
     </div>
 </body>
