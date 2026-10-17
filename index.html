@@ -322,6 +322,154 @@
       letter-spacing: 0.5px;
     }
 
+    /* Cross Promotions & Featured Ads Showcase */
+    .cross-promo-section {
+      margin-top: 5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .promo-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .promo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124, 77, 255, 0.12);
+      border: 1px solid rgba(124, 77, 255, 0.35);
+      color: #b388ff;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .promo-header h2 {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .promo-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .cross-promo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .promo-card {
+      background: linear-gradient(180deg, rgba(25, 23, 44, 0.8) 0%, rgba(18, 17, 31, 0.95) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .promo-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 176, 255, 0.4);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 176, 255, 0.15);
+    }
+
+    .promo-card-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .promo-card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .promo-card-meta {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .promo-card-title {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .promo-card-category {
+      font-size: 0.75rem;
+      color: var(--secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .promo-card-desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      flex: 1;
+    }
+
+    .promo-btn-play {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0, 176, 255, 0.15) 0%, rgba(124, 77, 255, 0.15) 100%);
+      border: 1px solid rgba(0, 176, 255, 0.3);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .promo-btn-play:hover {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(0, 176, 255, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .promo-btn-play svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
     footer {
       border-top: 1px solid var(--border-color);
       padding: 2.5rem 2rem;
@@ -501,7 +649,12 @@
   <header>
     <div class="header-container">
       <div class="logo">Niraj Panditt</div>
-      <div class="portfolio-badge">App Ecosystem</div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#cross-promotions" class="portfolio-badge" style="text-decoration: none; display: flex; align-items: center; gap: 0.4rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--secondary)'; this.style.color='#fff';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.color='var(--secondary)';">
+          <span>⚡ Cross-Promotions</span>
+        </a>
+        <div class="portfolio-badge">App Ecosystem</div>
+      </div>
     </div>
   </header>
 
@@ -512,19 +665,20 @@
     </section>
 
     <div class="apps-grid">
-      <!-- HabitGrid App -->
+      <!-- Routine Planner: To-Do & Habit App -->
       <div class="app-card" id="card-HabitGrid">
-        <div class="app-icon">🔒</div>
+        <div class="app-icon">⚡</div>
         <div class="app-details">
-          <h3 class="app-title">HabitGrid</h3>
-          <p class="app-desc">A 100% private, offline-first habit tracker, daily routine planner, and mood journal with local AES-256 database encryption. Keep your records securely in your own pocket.</p>
+          <h3 class="app-title">Routine Planner: To-Do &amp; Habit</h3>
+          <p class="app-desc">A 100% private, offline-first routine planner, habit tracker, and to-do task organizer with encrypted local SQLite storage, quick routine dashboard hub, and streak analytics. Keep your daily life organized in your pocket.</p>
           <div class="app-tags">
             <span class="tag tag-highlight">Privacy-First</span>
-            <span class="tag">Habit Tracker</span>
+            <span class="tag">Routine Planner</span>
+            <span class="tag tag-accent">Streaks &amp; To-Do</span>
             <span class="tag">Offline Ledger</span>
           </div>
           <div class="btn-group">
-            <button class="btn btn-primary" onclick="launchShowcase('HabitGrid', 'HabitGrid/index.html')">Show website</button>
+            <button class="btn btn-primary" onclick="launchShowcase('Routine Planner', 'HabitGrid/index.html')">Show website</button>
             <a href="HabitGrid/index.html" class="btn btn-secondary">Direct Link</a>
             <a href="https://play.google.com/store/apps/details?id=com.liferemind.app" class="btn btn-secondary" target="_blank">Google Play</a>
           </div>
@@ -743,6 +897,180 @@
         </div>
       </div>
     </div>
+
+    <!-- Cross Promotions & Ad Units Section -->
+    <section class="cross-promo-section" id="cross-promotions">
+      <div class="promo-header">
+        <div class="promo-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          Cross-Promotion Ecosystem
+        </div>
+        <h2>Discover More Apps</h2>
+        <p>Explore our complete network of offline-first utilities, mindfulness companions, and productivity tools available on Google Play.</p>
+      </div>
+
+      <div class="cross-promo-grid">
+        <!-- Routine Planner: To-Do & Habit -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">⚡</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">Routine Planner: To-Do &amp; Habit</div>
+              <div class="promo-card-category">Productivity • Habits &amp; Tasks</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Offline routine hub, streak counter, task organizer, and habit matrix with encrypted local storage.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.liferemind.app" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- Numerology 360 -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">🔮</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">Numerology 360</div>
+              <div class="promo-card-category">Lifestyle • Destiny Matrix</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Pythagorean &amp; Chaldean readings, Lo Shu Grid calculator, and cosmic compatibility analytics.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.numerologycalculator.dailyguide" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- CodeLab - Python IDE -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">🐍</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">CodeLab - Python IDE</div>
+              <div class="promo-card-category">Tools • Python 3.11 Compiler</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Run Python 3.11 code offline on Android with terminal console, editor highlighting, and lessons.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.codelab.compiler.editor" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- CSE Plus -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">💻</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">CSE Plus</div>
+              <div class="promo-card-category">Education • CS &amp; Coding</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Interactive CS tutorials, coding interview preparation, and programming references offline.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.cseplus.app" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- Stoic Wisdom -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">🏛️</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">Stoic Wisdom</div>
+              <div class="promo-card-category">Books &amp; Reference • Mindset</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Daily philosophical quotes, private encrypted reflections, and timeless stoic journal prompts.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.stoic.quotes.journal" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- Tarot Card Reading & Meaning -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">🎴</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">Tarot Card Reading</div>
+              <div class="promo-card-category">Entertainment • Divination</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">All 78 Rider-Waite cards, 50 spreads, real-time moon phases, 432Hz ambient audio, and journal.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.tarotcardreading.meaning" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- PagePulse -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">📚</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">PagePulse</div>
+              <div class="promo-card-category">Productivity • Reading Tracker</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Track reading speed, page milestones, book notes, and annual reading streaks in total privacy.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.pagepulse.pagepulse" target="_blank" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+
+        <!-- ReikiFlow -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">✨</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">Reiki Healing &amp; Bell</div>
+              <div class="promo-card-category">Health &amp; Fitness • Meditation</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Traditional Usui positions, interval bells, Solfeggio soundscapes, and AMOLED sanctuary mode.</p>
+          <a href="ReikiFlow/index.html" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            Explore Web App
+          </a>
+        </div>
+
+        <!-- GlucoTrack -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">🩸</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">GlucoTrack</div>
+              <div class="promo-card-category">Medical • Blood Sugar &amp; Carbs</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Private blood glucose, carb intake, ADA clinical targets, and doctor-ready PDF health exports.</p>
+          <a href="bmiweb/index.html" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            Explore Web App
+          </a>
+        </div>
+
+        <!-- PCOS Tracker -->
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <div class="promo-card-icon">🌸</div>
+            <div class="promo-card-meta">
+              <div class="promo-card-title">PCOS Tracker</div>
+              <div class="promo-card-category">Health • Menstrual &amp; Hormonal</div>
+            </div>
+          </div>
+          <p class="promo-card-desc">Specialized cycle tracker, hormonal wellness, and symptom management offline and private.</p>
+          <a href="pcostracker/index.html" class="promo-btn-play">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            Explore Web App
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
