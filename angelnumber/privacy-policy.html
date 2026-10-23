@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Angel Number Tracker | Niraj AI Solutions</title>
+<style>
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    max-width: 850px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    background-color: #f8fafc;
+  }
+  h1, h2, h3 { color: #1e293b; }
+  h1 { border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; font-size: 2rem; }
+  h2 { margin-top: 28px; font-size: 1.35rem; color: #0f172a; border-left: 4px solid #d97706; padding-left: 10px; }
+  h3 { font-size: 1.1rem; margin-top: 18px; }
+  p { margin-bottom: 16px; }
+  ul, ol { margin-bottom: 16px; padding-left: 24px; }
+  li { margin-bottom: 8px; }
+  a { color: #d97706; text-decoration: none; font-weight: 500; }
+  a:hover { text-decoration: underline; }
+  .container { 
+    background: #ffffff; 
+    padding: 36px 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); 
+  }
+  .app-identifiers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 25px 0;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+  .app-identifiers-table th, .app-identifiers-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .app-identifiers-table th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    width: 35%;
+  }
+  .highlight-box {
+    background-color: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-left: 4px solid #d97706;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+  }
+  .nav-links {
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+  .nav-links a { margin-right: 16px; }
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html">← Portal Overview</a>
+    <a href="privacy-policy.html"><strong>Privacy Policy</strong></a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="data-deletion.html">Data Deletion</a>
+    <a href="support.html">Support</a>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <p><em>Effective Date: October 2026 • Version 1.0.0</em></p>
+
+  <div class="highlight-box">
+    <strong>Executive Summary:</strong> Angel Number Tracker is engineered as a <strong>100% local-first</strong> mobile application. All sightings, timestamps, notes, vibration ratings, favorites, and spiritual journal entries are stored strictly on your local device using SQLite. We operate zero cloud databases for personal records and zero telemetry tracking.
+  </div>
+
+  <h2>1. App & Developer Identification</h2>
+  <table class="app-identifiers-table">
+    <tr>
+      <th>Application Name</th>
+      <td><strong>Angel Number Tracker: Codex</strong></td>
+    </tr>
+    <tr>
+      <th>Application ID / Package Name</th>
+      <td><code>com.nirajpandit.angel_number_tracker</code></td>
+    </tr>
+    <tr>
+      <th>Developer / Legal Entity</th>
+      <td><strong>Niraj AI Solutions</strong></td>
+    </tr>
+    <tr>
+      <th>Developer Name</th>
+      <td>Niraj Pandit (Niraj Kumar)</td>
+    </tr>
+    <tr>
+      <th>Contact Email</th>
+      <td><a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a></td>
+    </tr>
+    <tr>
+      <th>Google Play Developer Profile</th>
+      <td><a href="https://play.google.com/store/apps/dev?id=8139829473205143403" target="_blank" rel="noopener noreferrer">Niraj AI Solutions Developer Page</a></td>
+    </tr>
+  </table>
+
+  <h2>2. Information Collection & Storage (Local-First Architecture)</h2>
+  <p>The App handles the following categories of data purely on your local Android device:</p>
+  <ul>
+    <li><strong>Angel Number Sightings:</strong> Sequence numbers observed (e.g. 111, 444), date/time stamps, context source (Clock, License Plate, Receipt, Dream), emotional vibe scores, and situational reflections.</li>
+    <li><strong>Spiritual Journal Entries:</strong> User-written personal reflections, dates, and associated angel sequences.</li>
+    <li><strong>Favorites:</strong> Starred angel number sequences and personal notes.</li>
+    <li><strong>Local Cache:</strong> The 000–999 sacred codex interpretations pre-seeded inside local SQLite database.</li>
+  </ul>
+  <p><strong>Zero Cloud Retention:</strong> This user-owned data resides solely in local device storage managed by the Drift SQLite database. None of this personal information is collected, transmitted, or hosted on remote developer servers.</p>
+
+  <h2>3. Network Requests & Live Codex Updates</h2>
+  <p>The App includes a configurable HTTPS REST client used exclusively for checking if newer dictionary definitions are available for the public Angel Codex:</p>
+  <ul>
+    <li>Requests to the codex endpoint send standard HTTP headers (such as <code>If-None-Match</code> / ETag) to verify library freshness.</li>
+    <li><strong>No personal data is sent in these requests:</strong> Neither your sightings, journal notes, nor device identifiers are included in network calls.</li>
+    <li>Users have the ability to view, customize, or disable this endpoint under Settings.</li>
+  </ul>
+
+  <h2>4. In-App Purchases & Financial Data</h2>
+  <p>Optional digital premium features (Celestial Plus) are processed strictly through Google Play In-App Billing:</p>
+  <ul>
+    <li>We do not collect, process, or store credit card numbers, payment tokens, or banking credentials.</li>
+    <li>Payment transactions are governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.</li>
+    <li>Premium entitlement validation is managed in a separate service decoupled from your personal SQLite database.</li>
+  </ul>
+
+  <h2>5. Advertising & Third-Party Analytics</h2>
+  <p>Angel Number Tracker contains <strong>zero third-party advertising SDKs</strong>, zero commercial trackers, and zero behavioral analytics. We do not sell, rent, monetize, or disclose your personal records to third parties.</p>
+
+  <h2>6. Data Sovereignty, Export & Deletion</h2>
+  <p>You have full technical ownership of your data at all times:</p>
+  <ul>
+    <li><strong>JSON Data Export:</strong> You can export your entire sighting history, favorites, and journal entries to a readable JSON file with one tap via Settings.</li>
+    <li><strong>Permanent Wipe:</strong> You can erase all user-created records instantly via Settings &gt; "Permanent Data Wipe".</li>
+  </ul>
+
+  <h2>7. Children's Privacy</h2>
+  <p>The App does not target or knowingly collect data from children under 13. Since all content remains on the local device and no accounts are created, no child personal information is collected on remote servers.</p>
+
+  <h2>8. Contact & Privacy Inquiries</h2>
+  <p>For any questions regarding this Privacy Policy or compliance inquiries, please contact:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a></li>
+    <li><strong>Developer Portfolio:</strong> <a href="https://nnirajpanditt.github.io/">https://nnirajpanditt.github.io/</a></li>
+  </ul>
+
+  <footer>
+    &copy; 2026 Niraj AI Solutions / Niraj Pandit. All rights reserved.
+  </footer>
+</div>
+</body>
+</html>
