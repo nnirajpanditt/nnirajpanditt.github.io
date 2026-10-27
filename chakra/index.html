@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chakra Meditation & Healing - Official App Portal & Legal Compliance</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+  :root {
+    --primary: #7c3aed;
+    --primary-light: #8b5cf6;
+    --primary-dark: #6d28d9;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --card-border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #334155; 
+    max-width: 920px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    background-color: var(--bg-light);
+  }
+  h1, h2, h3 { color: var(--text-dark); }
+  .container { 
+    background: #ffffff; 
+    padding: 40px; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+  }
+  .hero-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 28px;
+    border-bottom: 2px solid var(--card-border);
+    margin-bottom: 30px;
+  }
+  .app-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25);
+    object-fit: cover;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    color: #0f172a;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: #ede9fe;
+    color: #6d28d9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+  h2 { 
+    margin-top: 36px; 
+    margin-bottom: 18px;
+    font-size: 1.35rem; 
+    color: var(--text-dark); 
+    border-left: 4px solid var(--primary); 
+    padding-left: 12px; 
+  }
+  p { margin-bottom: 16px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+  }
+  .card {
+    background: #fafafa;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.08);
+  }
+  .card h3 { 
+    margin-top: 0; 
+    color: var(--text-dark); 
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+    margin-bottom: 16px;
+  }
+  .card a.btn-link {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .card a.btn-link:hover { text-decoration: underline; }
+  
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .feature-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 10px;
+  }
+  .feature-item strong {
+    display: block;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+  .feature-item span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .app-identifiers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 25px 0;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+  }
+  .app-identifiers-table th, .app-identifiers-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .app-identifiers-table th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    width: 32%;
+  }
+  .cta-banner {
+    background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+    color: #ffffff;
+    padding: 24px 30px;
+    border-radius: 12px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .cta-banner h3 { color: #ffffff; font-size: 1.25rem; margin-bottom: 4px; }
+  .cta-banner p { color: #e0e7ff; margin-bottom: 0; font-size: 0.95rem; }
+  .cta-btn {
+    background: #ffffff;
+    color: #6d28d9;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .cta-btn:hover {
+    transform: scale(1.04);
+  }
+  footer { 
+    margin-top: 40px; 
+    text-align: center; 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    border-top: 1px solid var(--card-border);
+    padding-top: 20px;
+  }
+  @media (max-width: 600px) {
+    .hero-header { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero-header">
+    <img src="icon.png" alt="Chakra Meditation & Healing Icon" class="app-icon">
+    <div class="hero-text">
+      <h1>Chakra Meditation &amp; Healing</h1>
+      <p style="color: #64748b; margin-bottom: 0;">7 Chakras, Solfeggio Frequencies, Vedic Seed Mantras &amp; Mindful Breathwork</p>
+      <span class="hero-badge">Official Legal &amp; Policy Portal • Niraj AI Solutions</span>
+    </div>
+  </div>
+
+  <p>
+    Welcome to the official documentation and legal compliance portal for <strong>Chakra Meditation &amp; Healing</strong> (Package: <code>com.chakra.meditation.healing</code>), designed and published by <strong>Niraj AI Solutions / Niraj Pandit</strong>.
+  </p>
+
+  <h2>Legal &amp; Policy Documents</h2>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>🛡️ Privacy Policy</h3>
+        <p>Comprehensive disclosure on our offline-first architecture, local SQLite data storage, zero cloud profiling, Google UMP consent, and third-party ad compliance.</p>
+      </div>
+      <a href="privacy.html" class="btn-link">Read Privacy Policy →</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>📜 Terms of Service</h3>
+        <p>User license, spiritual and non-clinical health disclaimers, intellectual property rights, and terms of service.</p>
+      </div>
+      <a href="terms.html" class="btn-link">Read Terms of Service →</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>🗑️ Data Deletion</h3>
+        <p>Transparent step-by-step instructions on executing complete in-app data wiping and Android OS storage deletion.</p>
+      </div>
+      <a href="data-deletion.html" class="btn-link">View Data Deletion Guide →</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>💬 Support &amp; FAQ</h3>
+        <p>Frequently asked questions, offline playback guide, Solfeggio frequency breakdown, and developer contact support.</p>
+      </div>
+      <a href="support.html" class="btn-link">Customer Support &amp; FAQ →</a>
+    </div>
+  </div>
+
+  <h2>Key Application Features</h2>
+  <div class="feature-list">
+    <div class="feature-item">
+      <strong>🌿 7 Chakra System</strong>
+      <span>Root (396Hz) to Crown (963Hz) harmonic Solfeggio soundscapes.</span>
+    </div>
+    <div class="feature-item">
+      <strong>🗣️ Vedic Seed Mantras</strong>
+      <span>Vocal pronunciation audio sequenced with Tibetan singing bowls.</span>
+    </div>
+    <div class="feature-item">
+      <strong>📿 Digital Japa Mala</strong>
+      <span>Haptic-enabled 108 bead counter with milestone chime alerts.</span>
+    </div>
+    <div class="feature-item">
+      <strong>🌬️ Pranayama Breathwork</strong>
+      <span>Box Breathing (4-4-4-4) and 4-7-8 relaxing visual breath pacers.</span>
+    </div>
+    <div class="feature-item">
+      <strong>🎧 Background Playback</strong>
+      <span>Screen-off audio playback with lock screen media controls.</span>
+    </div>
+    <div class="feature-item">
+      <strong>📶 100% Offline Capable</strong>
+      <span>Zero downloads or Wi-Fi required; full functionality offline.</span>
+    </div>
+  </div>
+
+  <h2>Developer &amp; App Details</h2>
+  <table class="app-identifiers-table">
+    <tr>
+      <th>Application Name</th>
+      <td>Chakra Meditation &amp; Healing</td>
+    </tr>
+    <tr>
+      <th>Package Name</th>
+      <td><code>com.chakra.meditation.healing</code></td>
+    </tr>
+    <tr>
+      <th>Publisher / Developer</th>
+      <td>Niraj AI Solutions / Niraj Pandit</td>
+    </tr>
+    <tr>
+      <th>Contact Email</th>
+      <td><a href="mailto:nnirajpanditt@gmail.com" style="color: #7c3aed; text-decoration: none;">nnirajpanditt@gmail.com</a></td>
+    </tr>
+    <tr>
+      <th>Google Play Developer Profile</th>
+      <td><a href="https://play.google.com/store/apps/dev?id=8139829473205143403" target="_blank" rel="noopener noreferrer" style="color: #7c3aed; text-decoration: none;">View Play Store Developer Page</a></td>
+    </tr>
+    <tr>
+      <th>Developer Portfolio</th>
+      <td><a href="https://nnirajpanditt.github.io/" style="color: #7c3aed; text-decoration: none;">https://nnirajpanditt.github.io/</a></td>
+    </tr>
+  </table>
+
+  <div class="cta-banner">
+    <div>
+      <h3>Chakra Meditation &amp; Healing on Google Play</h3>
+      <p>Align your energy, find inner peace, and elevate your spiritual practice today.</p>
+    </div>
+    <a href="https://play.google.com/store/apps/dev?id=8139829473205143403" target="_blank" rel="noopener noreferrer" class="cta-btn">Google Play</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Niraj AI Solutions / Niraj Pandit. All rights reserved.
+  </footer>
+</div>
+</body>
+</html>
