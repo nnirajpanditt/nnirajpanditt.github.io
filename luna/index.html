@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luna - Moon Phase Calendar & Astronomical Guide</title>
+<style>
+  :root {
+    --bg: #0B1026;
+    --surface: #151B35;
+    --surface-elevated: #1E2548;
+    --gold: #E8C778;
+    --gold-glow: rgba(232, 199, 120, 0.4);
+    --lavender: #A99BDA;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A9B0C8;
+    --border: #26305C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.6; 
+    color: var(--text-primary); 
+    background-color: var(--bg);
+    overflow-x: hidden;
+  }
+  .header {
+    text-align: center;
+    padding: 70px 20px 40px;
+    background: radial-gradient(circle at 50% 20%, #1c244b 0%, #0B1026 70%);
+  }
+  .moon-hero {
+    font-size: 80px;
+    display: inline-block;
+    filter: drop-shadow(0 0 30px var(--gold-glow));
+    margin-bottom: 16px;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  h1 {
+    font-size: 2.8rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .tagline {
+    font-size: 1.25rem;
+    color: var(--lavender);
+    max-width: 620px;
+    margin: 0 auto 28px;
+  }
+  .badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .badge {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--gold);
+  }
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+  .feature-icon {
+    font-size: 32px;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+  .feature-card h3 {
+    font-size: 1.25rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 20px;
+    text-align: center;
+    background: var(--surface);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .footer-links a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: var(--lavender);
+  }
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="moon-hero">🌕</div>
+    <h1>LUNA</h1>
+    <p class="tagline">Moon Phase Calendar, Astronomical Ephemeris & Lunar Lifestyle Guide</p>
+    <div class="badge-row">
+      <span class="badge">Offline-First Engine</span>
+      <span class="badge">NASA Verified Eclipses</span>
+      <span class="badge">Jean Meeus Algorithms</span>
+      <span class="badge">Native Android Widgets</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="text-align:center; color:var(--gold); font-size: 2rem;">Celestial Capabilities</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🌒</span>
+        <h3>Precision Moon Phases</h3>
+        <p>Real-time calculation of illumination percentage, moon age in days, cycle progress, and countdown to next Full Moon and New Moon.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">📅</span>
+        <h3>Monthly & Yearly Calendars</h3>
+        <p>Interactive lunar grid with phase illustrations for every day of the month, plus an annual guide with traditional names (Wolf Moon, Harvest Moon).</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">♈</span>
+        <h3>Tropical Moon Zodiac</h3>
+        <p>Real-time astrological transit engine determining the Moon's exact tropical sign with precise ingress and egress timestamps.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">🌅</span>
+        <h3>Topocentric Moonrise & Moonset</h3>
+        <p>Location-aware horizon calculations incorporating topocentric elevation, lunar parallax, and atmospheric refraction.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">🌘</span>
+        <h3>NASA Eclipse Calendar</h3>
+        <p>Verified catalog of solar and lunar eclipses (2023-2032) from NASA GSFC with duration, magnitude, and local visibility mapping.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon">📱</span>
+        <h3>Native Android Widgets</h3>
+        <p>Three elegant Kotlin home-screen widgets (Small 2x2, Medium 4x2, Large 4x3) displaying current phase, illumination, and countdowns.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="support.html">Help &amp; Support</a>
+      <a href="data-deletion.html">Data Deletion Instructions</a>
+    </div>
+    <p>&copy; 2026 Luna – Moon Phase Calendar. Developed by Niraj Pandit.</p>
+  </footer>
+</body>
+</html>

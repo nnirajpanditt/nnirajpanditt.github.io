@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Luna: Moon Phase Calendar</title>
+<style>
+  :root {
+    --bg: #0B1026;
+    --surface: #151B35;
+    --surface-elevated: #1E2548;
+    --gold: #E8C778;
+    --gold-subtle: rgba(232, 199, 120, 0.15);
+    --lavender: #A99BDA;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A9B0C8;
+    --border: #26305C;
+  }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.7; 
+    color: var(--text-primary); 
+    max-width: 880px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    background-color: var(--bg);
+  }
+  h1, h2, h3 { color: var(--gold); }
+  h1 { border-bottom: 2px solid var(--border); padding-bottom: 14px; font-size: 2.2rem; }
+  h2 { margin-top: 36px; font-size: 1.4rem; border-left: 4px solid var(--gold); padding-left: 14px; }
+  h3 { font-size: 1.15rem; margin-top: 22px; color: var(--lavender); }
+  p { margin-bottom: 16px; color: var(--text-secondary); }
+  ul, ol { margin-bottom: 16px; padding-left: 24px; color: var(--text-secondary); }
+  li { margin-bottom: 8px; }
+  a { color: var(--gold); text-decoration: underline; font-weight: 500; }
+  a:hover { color: var(--lavender); }
+  .container { 
+    background: var(--surface); 
+    padding: 40px; 
+    border-radius: 16px; 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35); 
+    border: 1px solid var(--border);
+  }
+  .highlight-box {
+    background-color: var(--gold-subtle);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 24px 0;
+  }
+  .highlight-box p { color: var(--text-primary); margin: 0; font-weight: 500; }
+  .meta-tag {
+    display: inline-block;
+    background: var(--surface-elevated);
+    color: var(--lavender);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+  }
+  .footer-nav {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="meta-tag">Effective Date: November 8, 2026</span>
+  <h1>Privacy Policy</h1>
+  <p>This Privacy Policy describes how <strong>Luna – Moon Phase Calendar</strong> ("we", "our", or "the App"), developed by <strong>Niraj Pandit</strong>, handles information when you use our mobile application on Android and other supported platforms.</p>
+
+  <div class="highlight-box">
+    <p>🌙 <strong>Core Privacy Promise:</strong> Luna is built with an offline-first architecture. All astronomical algorithms, moon phase predictions, and calendar calculations execute entirely locally on your device. Your precise location coordinates are never collected, stored, or transmitted to any external server.</p>
+  </div>
+
+  <h2>1. Information We Collect and Process</h2>
+  
+  <h3>A. Location Data (Optional)</h3>
+  <p>Luna offers optional features that compute topocentric horizon data (precise moonrise, moonset, altitude, and azimuth). If you choose to enable location services:</p>
+  <ul>
+    <li>The App requests access to your device's approximate (Coarse) or precise (Fine) location via standard Android location APIs.</li>
+    <li><strong>Local Processing Only:</strong> Your coordinates (latitude and longitude) are strictly used by on-device mathematical formulas to compute horizon events.</li>
+    <li><strong>No External Transmission:</strong> Your geographic coordinates are never sent to our servers, advertisers, or any third party.</li>
+    <li><strong>Manual Alternative:</strong> You can completely decline location permissions and manually select a city from our built-in offline world cities catalog.</li>
+  </ul>
+
+  <h3>B. Locally Stored Information</h3>
+  <p>The App stores preferences locally on your device via Android SharedPreferences and SQLite (Drift):</p>
+  <ul>
+    <li>Selected observer hemisphere (Northern or Southern).</li>
+    <li>Notification schedule preferences and alert delivery times.</li>
+    <li>User-selected zodiac sign for horoscope readings.</li>
+    <li>Saved favorite lunar lifestyle recommendations.</li>
+    <li>Home-screen widget theme preferences.</li>
+  </ul>
+  <p>This data remains on your physical device and is removed when you clear application data or uninstall the App.</p>
+
+  <h2>2. Third-Party Services & Advertising</h2>
+  <p>To support ongoing development and maintenance, Luna displays advertisements using the <strong>Google Mobile Ads SDK (AdMob)</strong> for users on the free tier.</p>
+  
+  <h3>A. Google AdMob & User Messaging Platform (UMP)</h3>
+  <p>AdMob may collect device-specific information to serve contextual or personalized advertisements according to your consent settings. This data may include:</p>
+  <ul>
+    <li>IP address (used to infer broad geographic region, e.g. country or city).</li>
+    <li>Advertising Identifier (Google Advertising ID / GAID).</li>
+    <li>App performance, diagnostics, and crash logs.</li>
+  </ul>
+  <p>We implement Google's User Messaging Platform (UMP) SDK. In applicable jurisdictions (including the European Economic Area, the UK, and California), you are presented with a consent form where you can accept, decline, or configure personalized ad preferences.</p>
+  <p>You can re-open or modify your privacy consent preferences at any time directly within the App: <strong>Settings &gt; Luna Celestial Club &gt; Manage GDPR &amp; Cookie Consent</strong>.</p>
+
+  <h3>B. Ad-Free Premium Subscription</h3>
+  <p>Users who subscribe to the <strong>Luna Celestial Club</strong> receive a 100% ad-free experience. When a subscription is active, all ad requests, banners, native ads, and interstitials are completely disabled.</p>
+
+  <h2>3. Data Retention and Account Deletion</h2>
+  <p>Luna does not require user account registration, login credentials, or email sign-ups. Because we do not operate a user database or store your personal information on remote servers, there is no remote account data to delete.</p>
+  <p>To erase all locally cached preferences, favorites, and widget configurations, simply clear the app storage in your Android device settings: <strong>Settings &gt; Apps &gt; Luna &gt; Storage &gt; Clear Storage / Clear Data</strong>.</p>
+
+  <h2>4. Children's Privacy (COPPA Compliance)</h2>
+  <p>Luna does not knowingly collect personally identifiable information from children under the age of 13. The application is designed for general astronomy, calendar, and lifestyle audiences. If you believe your child has provided us with personal information, please contact us immediately, and we will take steps to ensure privacy compliance.</p>
+
+  <h2>5. Your Rights (GDPR & CCPA/CPRA)</h2>
+  <p>Depending on your location, you may have statutory privacy rights regarding your data:</p>
+  <ul>
+    <li>The right to withdraw ad consent at any time through our in-app privacy manager.</li>
+    <li>The right to opt-out of interest-based advertising via Android system settings (<strong>Settings &gt; Privacy &gt; Ads &gt; Delete advertising ID</strong>).</li>
+    <li>The right to lodge a complaint with your local data protection supervisory authority.</li>
+  </ul>
+
+  <h2>6. Security Measures</h2>
+  <p>We are dedicated to safeguarding your privacy. We enforce modern application security standards:</p>
+  <ul>
+    <li>Minimal permission footprint (no access to contacts, storage, camera, microphone, or SMS).</li>
+    <li>Strict offline-first astronomical calculation architecture.</li>
+    <li>Encrypted data-in-transit (HTTPS/TLS) for AdMob and Google Play Billing communications.</li>
+  </ul>
+
+  <h2>7. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect updates in legal requirements, Google Play policies, or app functionality. Any modifications will be posted to this page with an updated effective date.</p>
+
+  <h2>8. Contact Us</h2>
+  <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or Luna's data practices, please reach out to us at:</p>
+  <p><strong>Developer:</strong> Niraj Pandit<br>
+  <strong>Email:</strong> <a href="mailto:nnirajpanditt@gmail.com">nnirajpanditt@gmail.com</a><br>
+  <strong>Website:</strong> <a href="https://nnirajpanditt.github.io/luna/">https://nnirajpanditt.github.io/luna/</a></p>
+
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="support.html">Support &amp; FAQ</a>
+    <a href="data-deletion.html">Data Deletion</a>
+  </div>
+</div>
+</body>
+</html>
