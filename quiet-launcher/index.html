@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet - Dumb Phone Launcher & Minimalist Focus</title>
+    <meta name="description" content="Turn your smartphone into a distraction-free dumb phone. 100% offline, zero ads, mindful breathing pause, pure OLED black.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #38bdf8;
+            --accent: #34d399;
+            --bg-dark: #080a10;
+            --bg-card: #111622;
+            --border: #20293a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .hero {
+            text-align: center;
+            padding: 5rem 1.5rem 3rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #ffffff 60%, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: #04121e;
+            padding: 0.9rem 2rem;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .features-grid {
+            max-width: 1000px;
+            margin: 0 auto 4rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1.5rem;
+        }
+        .feature-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 16px;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+        }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        footer {
+            margin-top: auto;
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.2rem;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <span class="badge">✦ Digital Wellness Launcher</span>
+    <h1>Turn Your Phone Into a Dumb Phone</h1>
+    <p class="subtitle">Replace dopamine-heavy colorful app icons with quiet, clean typography. Cut 2+ hours of screen time daily with zero advertisements or subscription traps.</p>
+    
+    <div class="cta-group">
+        <a href="https://play.google.com/store/apps/details?id=com.dumbphone.minimalist.launcher" class="btn-primary" target="_blank">Get on Google Play</a>
+        <a href="privacy-policy.html" class="btn-secondary">Privacy Policy</a>
+    </div>
+</div>
+
+<div class="features-grid">
+    <div class="feature-card">
+        <span class="feature-icon">🌿</span>
+        <h3>Mindful Pause (Breathing Delay)</h3>
+        <p>A gentle 5-second breathing friction timer before opening social apps interrupts automatic muscle-memory doomscrolling.</p>
+    </div>
+    <div class="feature-card">
+        <span class="feature-icon">🖤</span>
+        <h3>Pure OLED Pitch Black</h3>
+        <p>Crafted in 100% #000000 true black. Keeps physical AMOLED display pixels turned completely off to save massive battery.</p>
+    </div>
+    <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h3>Instant T9 &amp; Text Search</h3>
+        <p>Swipe up and type. Find any installed application in milliseconds without navigating messy app grids.</p>
+    </div>
+    <div class="feature-card">
+        <span class="feature-icon">🔒</span>
+        <h3>100% Offline &amp; Private</h3>
+        <p>Zero internet permissions required. Zero third-party analytics or tracking SDKs. Your habits never leave your phone.</p>
+    </div>
+    <div class="feature-card">
+        <span class="feature-icon">⟲</span>
+        <h3>1-Tap Switch Back</h3>
+        <p>Never get locked out. Dedicated 1-tap exit directly opens Android Home Settings anytime you want your old launcher back.</p>
+    </div>
+    <div class="feature-card">
+        <span class="feature-icon">🛡️</span>
+        <h3>No Subscription Traps</h3>
+        <p>Unlike competing launchers demanding $30/year, Quiet believes focus tools should be accessible to everyone.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="delete-data.html">Delete Data</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <p style="color: #64748b; font-size: 0.9rem;">&copy; 2026 Niraj Panditt. Built for digital wellness &amp; focus.</p>
+</footer>
+
+</body>
+</html>
